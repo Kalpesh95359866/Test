@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.popular.PopularFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/normal_toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPrecties"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="6"
+        tools:listitem="@layout/itemview_practices" />
+
+    <TextView
+        android:id="@+id/tvAllPrecticesLBL"
+        style="@style/sf_pro_display_medium_18"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_below="@+id/rvPrecties"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_height="wrap_content"
+        android:text="All Practices" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPrectiesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvAllPrecticesLBL"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="8"
+        tools:listitem="@layout/itemview_popuer_list" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:minHeight="@dimen/_250sdp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <include
+            android:id="@+id/bottomSheet"
+            layout="@layout/dialog_practices" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

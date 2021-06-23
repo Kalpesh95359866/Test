@@ -1,0 +1,22 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/ic_home_nav"
+        android:id="@+id/menu_Home"
+        tools:ignore="MenuTitle" />
+
+    <item
+        android:icon="@drawable/ic_open"
+        android:id="@+id/menu_Lessons"
+        tools:ignore="MenuTitle" />
+    <item
+        android:icon="@drawable/ic_meditation"
+        android:id="@+id/menu_mediation"
+        tools:ignore="MenuTitle" />
+    <item
+        android:icon="@drawable/ic_profile"
+        android:id="@+id/menu_Profile"
+        tools:ignore="MenuTitle" />
+</menu>
+
+
