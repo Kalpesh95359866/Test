@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".fragment.home.HomeFragment">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_210sdp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_190sdp"
+                android:background="@drawable/ic_natual_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv7DaysLBL"
+                        style="@style/sf_display_white_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:text="Day 7"
+                        tools:ignore="HardcodedText,RtlCompat" />
+
+                    <TextView
+                        android:id="@+id/tvTitleLBL"
+                        style="@style/sf_pro_display_25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:gravity="start"
+                        android:padding="@dimen/_3sdp"
+                        android:text="Love and Accept \nYourself"
+                        tools:ignore="HardcodedText,RtlCompat" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:src="@drawable/ic_nural_right" />
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/color2D31AC"
+                    android:src="@drawable/ic_nature_left" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/ic_gr" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/sf_pro_display_medium_18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Popular" />
+
+            <TextView
+                style="@style/sf_pro_display_black_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See All" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPopular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="6"
+            tools:listitem="@layout/itemview_home_list" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/sf_pro_display_medium_18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="New" />
+
+            <TextView
+                style="@style/sf_pro_display_black_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See All" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="6"
+            tools:listitem="@layout/itemview_home_list" />
+
+    </LinearLayout>
+</ScrollView>
